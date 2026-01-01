@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform _enemySpawnPosition;
     [SerializeField] private Sprite[] _enemySprites;
 
-    // юс╫ц
+    // Test
     private int _testHp = 8;
     private float _testMul = 1.35f;
 
@@ -31,7 +31,7 @@ public class EnemySpawner : MonoBehaviour
 
         var sprite = _enemySprites[Random.Range(0, _enemySprites.Length)];
 
-        long nextHp = (long)(_testHp * _testMul);
+        var nextHp = (long)(_testHp * _testMul);
         _testHp = (int)Mathf.Min(nextHp, int.MaxValue);
 
         Enmey.Initialize(sprite, _testHp);
